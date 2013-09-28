@@ -15,3 +15,18 @@
         color:#00000f;
     } 
 
+#tag-cloud {
+    width: 100%;
+    list-style: none;
+    font: 100% Arial, sans-serif;
+    border: 0.1px solid gray;
+    border-width: 1px 0 1px 0;
+    line-height: 1.5;
+}
+
+#tag-cloud li {
+  display: inline;
+  text-transform: lowercase;
+  text-decoration: none;
+  padding: 0 1em;
+}
