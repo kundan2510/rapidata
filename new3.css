@@ -24,7 +24,7 @@
     line-height: 1.5;
 }
 
-#tag-cloud li {
+#tag-cloud .tags_val {
   display: inline;
   text-transform: lowercase;
   text-decoration: none;

@@ -10,8 +10,11 @@
           var term_val = send_azax_call();
         }, 500);
     });
-      $('.tags_val').click(function(){
-        
+      $('#tag-cloud').on('click', 'li', function () {
+         var abcd = $(this).text();
+          var input_value = $('#search_box').val() +" "+ abcd;
+          $('#search_box').val(input_value);
+          var term_val = send_azax_call();
       });
     
 });
@@ -110,7 +113,7 @@ function send_azax_call(){
                         var j = 1;
                     $(xml).find('list_term').each(function() {
                         var term_value = $(this).text();
-                        terms += '<li><a class="tags_val" href="#" >'+ term_value+'</a></li>';
+                        terms += '<li class ="tags_val">'+ term_value+'</li>';
 
                         if(j%7 == 0)
                         {
@@ -122,7 +125,7 @@ function send_azax_call(){
                     });
                     $('#tag-cloud li').each(function() {
     
-            var $a = $(this).find('a');
+            var $a = $(this);
         var cssColor = createRandomColor();
         var cssFontSize = setFontSize();
         
